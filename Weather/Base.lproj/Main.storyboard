@@ -22,8 +22,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="OeW-fg-IjY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3M-pJ-APE">
@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="width" constant="112" id="K5W-bq-iKk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jH-8C-TSe">
@@ -41,7 +41,7 @@
                                     <constraint firstAttribute="height" constant="21" id="T1e-W6-thf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLj-II-ilV">
@@ -50,27 +50,28 @@
                                     <constraint firstAttribute="height" constant="21" id="tNM-0d-Dm3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU0-7G-DKl">
-                                <rect key="frame" x="16" y="318" width="568" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVv-28-vOb">
+                                <rect key="frame" x="275" y="550" width="51" height="30"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="update:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cu5-1Q-bOc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hU0-7G-DKl" secondAttribute="bottom" constant="261" id="0gO-NY-eUh"/>
-                            <constraint firstItem="hU0-7G-DKl" firstAttribute="trailing" secondItem="iLj-II-ilV" secondAttribute="trailing" id="2jV-b4-aJJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PlJ-9m-mCH" secondAttribute="trailing" constant="-5" id="4Gn-SS-Sr9"/>
                             <constraint firstItem="iLj-II-ilV" firstAttribute="leading" secondItem="2jH-8C-TSe" secondAttribute="leading" id="8B3-mJ-cjd"/>
-                            <constraint firstItem="hU0-7G-DKl" firstAttribute="leading" secondItem="iLj-II-ilV" secondAttribute="leading" id="AZk-EV-vhg"/>
+                            <constraint firstItem="dVv-28-vOb" firstAttribute="centerX" secondItem="iLj-II-ilV" secondAttribute="centerX" id="BMq-Qd-3ID"/>
+                            <constraint firstAttribute="bottom" secondItem="dVv-28-vOb" secondAttribute="bottom" constant="20" symbolic="YES" id="JUS-c1-Dal"/>
                             <constraint firstItem="2jH-8C-TSe" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="LSH-36-Afp"/>
                             <constraint firstItem="D3M-pJ-APE" firstAttribute="top" secondItem="PlJ-9m-mCH" secondAttribute="bottom" constant="35" id="R26-Xp-m68"/>
                             <constraint firstItem="iLj-II-ilV" firstAttribute="trailing" secondItem="2jH-8C-TSe" secondAttribute="trailing" id="UcR-JS-W79"/>
-                            <constraint firstItem="hU0-7G-DKl" firstAttribute="top" secondItem="iLj-II-ilV" secondAttribute="bottom" constant="8" symbolic="YES" id="W2M-1b-ERZ"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="2jH-8C-TSe" secondAttribute="bottom" constant="405" id="Yw4-DW-YGJ"/>
                             <constraint firstItem="PlJ-9m-mCH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="ZKl-tc-Suq"/>
                             <constraint firstItem="2jH-8C-TSe" firstAttribute="leading" secondItem="PlJ-9m-mCH" secondAttribute="leading" id="d1f-Lc-Vpa"/>
@@ -84,7 +85,6 @@
                         <outlet property="descLabel" destination="2jH-8C-TSe" id="kJE-IW-v5B"/>
                         <outlet property="locationLabel" destination="PlJ-9m-mCH" id="Bfi-WR-Yev"/>
                         <outlet property="tempLabel" destination="D3M-pJ-APE" id="iY6-3f-cw8"/>
-                        <outlet property="windDirectionLabel" destination="hU0-7G-DKl" id="GBq-Dh-t0Z"/>
                         <outlet property="windStrengthLabel" destination="iLj-II-ilV" id="bAA-Ql-F1v"/>
                     </connections>
                 </viewController>

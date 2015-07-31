@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Weather
-//
-//  Created by Kyle Goslan on 29/07/2015.
-//  Copyright (c) 2015 Kyle Goslan. All rights reserved.
-//
 
 import UIKit
 import CoreLocation
@@ -17,7 +10,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var windStrengthLabel: UILabel!
-    @IBOutlet weak var windDirectionLabel: UILabel!
     
     let locationManager = CLLocationManager()
     
@@ -34,7 +26,9 @@ class ViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
             return
         }
-        
+    }
+    
+    @IBAction func update(sender: AnyObject) {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.startUpdatingLocation()
@@ -60,7 +54,6 @@ class ViewController: UIViewController {
         descLabel.text = weather.desc
         tempLabel.text = "\(weather.temp)"
         windStrengthLabel.text = weather.wind.speed
-        windDirectionLabel.text = weather.wind.direction
     }
 
     override func didReceiveMemoryWarning() {

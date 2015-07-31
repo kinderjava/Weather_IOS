@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Weather
-//
-//  Created by Kyle Goslan on 29/07/2015.
-//  Copyright (c) 2015 Kyle Goslan. All rights reserved.
-//
 
 import UIKit
 
