@@ -54,6 +54,7 @@ class ViewController: UIViewController {
         descLabel.text = weather.desc
         tempLabel.text = "\(weather.temp)"
         windStrengthLabel.text = weather.wind.speed
+        locationManager.stopUpdatingLocation()
     }
 
     override func didReceiveMemoryWarning() {
