@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B39590B0CB7CFF9C62DDFBD /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01C79258429AA03D983014D /* Pods_Weather.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		1B39590B0CB7CFF9C62DDFBD /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01C79258429AA03D983014D /* Pods_Weather.framework */; };
 		274245761B69A7950009EC91 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274245751B69A7950009EC91 /* Weather.swift */; };
 		2775D02C1B692BD30039857C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775D02B1B692BD30039857C /* AppDelegate.swift */; };
 		2775D02E1B692BD30039857C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775D02D1B692BD30039857C /* ViewController.swift */; };
@@ -186,6 +186,8 @@
 		2775D01E1B692BD30039857C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Kyle Goslan";
 				TargetAttributes = {
@@ -424,6 +426,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Weather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -438,6 +441,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Weather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

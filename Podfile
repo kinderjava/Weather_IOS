@@ -1,9 +1,9 @@
-platform :ios, '8.0'
+platform :ios, ‘9.0’
 use_frameworks!
 
 target 'Weather' do
-    pod 'Alamofire', '~> 1.3'
-    pod 'SwiftyJSON', '~> 2.2.1'
+    pod 'Alamofire', '~> 3.0’
+    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 end
 
 target 'WeatherTests' do

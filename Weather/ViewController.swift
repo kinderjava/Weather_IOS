@@ -40,12 +40,15 @@ class ViewController: UIViewController {
         Alamofire.request(.GET, "http://api.openweathermap.org/data/2.5/weather", parameters:
             ["lat": lat, "lon": lon, "units": "metric", "APPID": "bc620920461d6ff26e97805183bf8fdd"]
             )
-            .responseJSON { request, response, json, error in
-                if error == nil {
+            .responseJSON { response in
+                let json = JSON(response.data!)
+                let weather = Weather(json: json)
+                self.updateView(weather)
+                /*if error == nil {
                     var json = JSON(json!)
                     let weather = Weather(json: json)
                     self.updateView(weather)
-                }
+                }*/
         }
     }
     
@@ -65,12 +68,12 @@ class ViewController: UIViewController {
 
 extension ViewController: CLLocationManagerDelegate {
     
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        println("didFailWithError \(error)")
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("didFailWithError \(error)")
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        let newLocation = locations.last as! CLLocation
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let newLocation = locations.last!
         getWeatherForLocation(newLocation)
     }
     
